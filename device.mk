@@ -369,3 +369,6 @@ PRODUCT_PACKAGES += \
 
 # JamesDSP
 $(call inherit-product, packages/apps/JamesDSPManager/config.mk)
+
+# Reduce system server verbosity.Add commentMore actions
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
