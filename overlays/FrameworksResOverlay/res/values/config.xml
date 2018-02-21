@@ -279,4 +279,7 @@
 
     <!-- The name of the package that will hold the dialer role by default. -->
     <string name="config_defaultDialer" translatable="false">com.google.android.dialer</string>
+
+    <!-- Whether the new Auto Selection Network UI should be shown -->
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 </resources>
