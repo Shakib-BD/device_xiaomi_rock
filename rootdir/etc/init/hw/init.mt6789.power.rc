@@ -11,9 +11,9 @@ on init
     setprop dalvik.vm.dex2oat-threads 6
 
     # VM Tweaks
-    write /proc/sys/vm/dirty_writeback_centisecs 300
+    write /proc/sys/vm/dirty_writeback_centisecs 500
     write /proc/sys/vm/dirty_background_ratio 10
-    write /proc/sys/vm/dirty_ratio 15
+    write /proc/sys/vm/dirty_ratio 20
     write /proc/sys/vm/dirty_expire_centisecs 3000
 
     # Boot time tuning
