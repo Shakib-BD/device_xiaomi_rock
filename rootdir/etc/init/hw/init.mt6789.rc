@@ -649,6 +649,10 @@ on boot
     chmod 0664 /sys/devices/platform/batt_wt_chg/power_supply/battery/current_now
     chmod 0644 /sys/class/power_supply/battery/charge_control_limit
 
+    # Workarround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
 # WiFi
 on property:vendor.sysctl.tx=3
     exec - root -- /vendor/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 3"
