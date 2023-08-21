@@ -360,3 +360,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/rock/rock-vendor.mk)
+
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
