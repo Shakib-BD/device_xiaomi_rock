@@ -294,3 +294,6 @@ ro.vendor.mtk_wfd_support=1
 
 # Dex2oat
 pm.dexopt.bg-dexopt=everything
+
+# Visual performance
+vendor.perf.framepacing.enable=1
