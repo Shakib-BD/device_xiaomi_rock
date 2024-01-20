@@ -268,7 +268,6 @@ pm.dexopt.aggressive_dex2oat.enable=false
 ro.actionable_compatible_property.enabled=true
 ro.allow.mock.location=0
 ro.base_build=noah
-ro.build.version.release_or_preview_display=13
 ro.com.android.mobiledata=false
 ro.postinstall.fstab.prefix=/system
 ro.product.property_source_order=odm,vendor,product,system
