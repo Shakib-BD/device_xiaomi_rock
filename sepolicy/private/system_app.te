@@ -3,7 +3,3 @@ set_prop(system_app, system_mtk_rcs_single_reg_support_prop)
 
 set_prop(system_app, system_mtk_cta_set_prop)
 
-allow system_app proc_pagetypeinfo:file r_file_perms;
-
-# allow system apps to read battery status
-# r_dir_file(system_app, sysfs_battery_supply)

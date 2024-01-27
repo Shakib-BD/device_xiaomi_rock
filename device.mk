@@ -176,9 +176,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-gapps
 
 PRODUCT_PACKAGES += \
-    WifiResOverlayrock \
-    SystemUIOverlayrock \
-    SettingsOverlayrock \
+    WifiResOverlayRock \
+    SystemUIOverlayRock \
+    SettingsOverlayRock \
 
 # Rootdir
 PRODUCT_PACKAGES += \
