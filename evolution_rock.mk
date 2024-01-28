@@ -11,15 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/rock/device.mk)
 
-# Inherit some common lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common evolution stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-# Bootanimation Res
+# EvolutionX Specific Flags
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_GRAMOPHONE := false
+TARGET_BUILD_VIMUSIC := false
+TARGET_IS_PIXEL := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rock
-PRODUCT_NAME := lineage_rock
+PRODUCT_NAME := evolution_rock
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22071219AI
 PRODUCT_MANUFACTURER := xiaomi

@@ -214,16 +214,16 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Prebuilt GcamGO
-#    PRODUCT_PACKAGES += \
-#    GCamGOPrebuilt-V3_8
+    PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V3_8
 
 # FM Radio
 # PRODUCT_PACKAGES += \
 #    FMRadio
 
 # BesLoudness
-# PRODUCT_PACKAGES += \
-#    BesLoudness
+PRODUCT_PACKAGES += \
+    BesLoudness
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
