@@ -11,24 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/rock/device.mk)
 
-# Inherit some common arrow stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Bootanimation Res
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# ArrowOS additions
-DEVICE_MAINTAINER := Shakib (@Shakib_BD)
-
-# Pixel Charger
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
-# ArrowOS Gapps Flag
-ARROW_GAPPS := true
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rock
-PRODUCT_NAME := arrow_rock
+PRODUCT_NAME := lineage_rock
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22071219AI
 PRODUCT_MANUFACTURER := xiaomi
