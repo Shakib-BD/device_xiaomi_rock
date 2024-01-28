@@ -3,3 +3,4 @@ set_prop(system_app, system_mtk_rcs_single_reg_support_prop)
 
 set_prop(system_app, system_mtk_cta_set_prop)
 
+allow system_app proc_pagetypeinfo:file r_file_perms;

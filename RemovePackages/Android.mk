@@ -10,7 +10,8 @@ LOCAL_OVERRIDES_PACKAGES := \
 		  CalendarGooglePrebuilt \
 		  Camera2 \
 		  Chrome-Stub \
-		  DeskClock \
+		  Chrome \
+                  DeskClock \
           Drive \
 		  Eleven \
 		  Etar \
@@ -31,7 +32,9 @@ LOCAL_OVERRIDES_PACKAGES := \
           Snap \
           Turbo \
           TipsPrebuilt \
+          Tycho \
 		  Velvet \
+                  ViMusic \
           YouTube \
 
 LOCAL_UNINSTALLABLE_MODULE := true

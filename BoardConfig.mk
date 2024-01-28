@@ -198,3 +198,20 @@ IGNORE_PREFER32_ON_DEVICE := true
 
 # Permissive 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Graphics
+TARGET_USES_DRM_PP := true
+TARGET_USES_GRALLOC4 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
+# Media
+TARGET_DISABLED_UBWC := true
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# FM Radio
+# BOARD_HAVE_MTK_FM := true
