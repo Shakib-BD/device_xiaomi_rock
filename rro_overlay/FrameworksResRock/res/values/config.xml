@@ -58,4 +58,5 @@
     name="config_deviceDcDimmingSysfsNode">/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dc_dim</string> 
     <!-- Whether to enable Lineage Health Service --> 
     <bool name="config_lineageHealthSupported">true</bool>
+
 </resources>
