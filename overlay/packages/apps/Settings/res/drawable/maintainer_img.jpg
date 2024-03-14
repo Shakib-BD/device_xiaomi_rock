@@ -12,8 +12,6 @@
 -->
 
 <resources>
-   <string name="maintainer_git_username">Shakib-BD</string>
-    <string name="maintainer_tele_username">Shakib_BD</string>
-    <string name="maintainer_ig_username">Shakibul.Islam.Official</string>
-    <string name="maintainer_fb_username">Shakibul.Islam.Official</string>
+   <string name="maintainer_git_username">Asmodeus79</string>
+    <string name="maintainer_tele_username">Asmodeus7999</string>
 </resources>

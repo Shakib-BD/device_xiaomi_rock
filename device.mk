@@ -33,6 +33,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/xiaomi/rock/rock-vendor.mk)
 
+# Animation when charging from powered off
+PRODUCT_PACKAGES += \
+    lineage_charger_animation
+
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -66,6 +70,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(LOCAL_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
+
+PRODUCT_COPY_FILE += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.enableswap:$(TARGET_COPY_OUT_SYSTEM)/vendor/etc/fstab.enableswap
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -172,14 +179,14 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-afterlife \
+    $(LOCAL_PATH)/overlay-lineage \
     $(LOCAL_PATH)/overlay-gapps
 
 PRODUCT_PACKAGES += \
     FrameworksResRock \
-    WifiResOverlayRock \
-    SystemUIOverlayRock \
     SettingsOverlayRock \
+    SystemUIOverlayRock \
+    WifiResOverlayRock
 
 # Rootdir
 PRODUCT_PACKAGES += \

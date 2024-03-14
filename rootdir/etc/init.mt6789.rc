@@ -1,6 +1,10 @@
 on init
     mount none /vendor/lost+found /vendor/overlay bind
     setprop sys.usb.ffs.aio_compat 1
+    write /sys/block/zram0/comp_algorithm lz4
+
+on fs
+    write /sys/block/zram0/comp_algorithm lz4
 
 on post-fs
     mount none /system/bin/hw/android.hardware.lights-service.mediatek /vendor/bin/hw/android.hardware.lights-service.mediatek bind
@@ -24,6 +28,7 @@ on property:vendor.ril.mtk=1
 
 on property:dev.bootcomplete=1
     chmod 0666 /dev/xiaomi-touch
+    swapon_all /system/vendor/etc/fstab.enableswap
 
 on property:persist.sys.MT6789.dt2w=0 && property:vendor.panel.touch_vendor=3
     exec - root -- /system/bin/sendevent /dev/input/event4 0 1 4
@@ -36,3 +41,21 @@ on property:persist.sys.MT6789.dt2w=1 && property:vendor.panel.touch_vendor=4
 
 on property:persist.sys.MT6789.dt2w=0 && property:vendor.panel.touch_vendor=4
     exec - root -- /system/bin/sendevent /dev/input/event3 0 1 4
+
+# Offline Charging
+service charger /system/bin/charger
+    class charger
+    group system graphics
+    critical
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
+on charger
+    chown system system /sys/power/state
+    chown system system /sys/power/wakeup_count
+    chown radio wakelock /sys/power/wake_lock
+    chown radio wakelock /sys/power/wake_unlock
+    chmod 0660 /sys/power/state
+    chmod 0660 /sys/power/wake_lock
+    chmod 0660 /sys/power/wake_unlock
+    chmod 0660 /sys/power/wakeup_count

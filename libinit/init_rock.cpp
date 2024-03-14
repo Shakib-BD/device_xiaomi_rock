@@ -112,7 +112,7 @@ void vendor_load_properties() {
         property_override("ro.product.mod_device", "rock_in");
     } else {
         set_device_props(
-            "POCO", "rock", "22071219CG", "rock_p_global", "POCO M5");
+            "POCO", "stone", "22071219CG", "rock_p_global", "POCO M5");
         property_override("ro.product.mod_device", "rock_p_global");
     }
 

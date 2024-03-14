@@ -22,5 +22,8 @@
     <string name="config_batChargeCycle">/sys/class/power_supply/battery/cycle_count</string>
     <bool name="config_supportBatteryHealth">true</bool>
 
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
 </resources>

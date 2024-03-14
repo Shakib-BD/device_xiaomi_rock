@@ -48,7 +48,7 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # Assertation
-TARGET_OTA_ASSERT_DEVICE := ROCK,rock
+TARGET_OTA_ASSERT_DEVICE := ROCK,STONE
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
