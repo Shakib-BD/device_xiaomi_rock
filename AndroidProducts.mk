@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2019 Potato Open Sauce Project
-# Copyright (C) 2020 The afterlifeOS Project
+# Copyright (C) 2020 The evolutionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_rock.mk
+    $(LOCAL_DIR)/evolution_rock.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_rock-user \
-    afterlife_rock-userdebug \
-    afterlife_rock-eng
+    evolution_rock-user \
+    evolution_rock-userdebug \
+    evolution_rock-eng
