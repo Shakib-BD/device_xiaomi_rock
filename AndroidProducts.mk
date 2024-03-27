@@ -19,6 +19,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/evolution_rock.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_rock-user \
-    evolution_rock-userdebug \
-    evolution_rock-eng
+    evolution_rock-ap1a-user \
+    evolution_rock-ap1a-userdebug \
+    evolution_rock-ap1a-eng
