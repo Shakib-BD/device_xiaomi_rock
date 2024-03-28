@@ -27,7 +27,7 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SeekBarPreference;
-import androidx.preference.SwitchPreferenceCompat;
+import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
@@ -40,7 +40,7 @@ public class KcalSettingsFragment extends PreferenceFragment implements
 
     private SharedPreferences mSharedPrefs;
 
-    private SwitchPreferenceCompat mKcalSwitchPreference;
+    private SwitchPreference mKcalSwitchPreference;
     private SeekBarPreference mRedColorSlider;
     private SeekBarPreference mGreenColorSlider;
     private SeekBarPreference mBlueColorSlider;
@@ -54,7 +54,7 @@ public class KcalSettingsFragment extends PreferenceFragment implements
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
-        mKcalSwitchPreference = (SwitchPreferenceCompat) findPreference("kcal_enable");
+        mKcalSwitchPreference = (SwitchPreference) findPreference("kcal_enable");
         mResetButton = (Preference) findPreference("reset_default_button");
 
         // Check if the node exists and enable / disable the preference depending on the case
@@ -103,7 +103,7 @@ public class KcalSettingsFragment extends PreferenceFragment implements
     private void configurePreferences() {
         mKcalSwitchPreference.setEnabled(true);
         mKcalSwitchPreference.setOnPreferenceChangeListener(this);
-        mKcalSwitchPreference = (SwitchPreferenceCompat) findPreference("kcal_enable");
+        mKcalSwitchPreference = (SwitchPreference) findPreference("kcal_enable");
         mResetButton = (Preference) findPreference("reset_default_button");
 
         // Set the preference so it resets all the other preference's values, and applies the configuration on click
