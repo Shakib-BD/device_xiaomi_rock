@@ -192,8 +192,8 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Xiaomi Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
+# PRODUCT_PACKAGES += \
+#    XiaomiParts
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
