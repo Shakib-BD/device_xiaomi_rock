@@ -20,6 +20,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_GRAMOPHONE := false
 TARGET_BUILD_VIMUSIC := false
 TARGET_IS_PIXEL := true
+TARGET_USES_MINI_GAPPS := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rock
