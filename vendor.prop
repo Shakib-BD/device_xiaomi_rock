@@ -88,6 +88,7 @@ ro.vendor.mtk_ovl_bringup=0
 ro.vendor.mtk_svp_on_mtee_support=2
 ro.vendor.smvr.p2batch.hd=4
 ro.vendor.smvr.p2batch.vga=8
+debug.sf.layer_caching_active_layer_timeout_ms=1000
 
 # GPS
 ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
