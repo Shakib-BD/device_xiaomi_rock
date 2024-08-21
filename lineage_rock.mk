@@ -14,6 +14,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from rock device
 $(call inherit-product, device/xiaomi/rock/device.mk)
 
+# Disable Eppe
+TARGET_DISABLE_EPPE := true
+
 PRODUCT_DEVICE := rock
 PRODUCT_NAME := lineage_rock
 PRODUCT_BRAND := Redmi
