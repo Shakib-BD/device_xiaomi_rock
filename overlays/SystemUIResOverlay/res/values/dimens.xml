@@ -23,6 +23,9 @@
     <dimen name="physical_volume_up_button_center_screen_location_y">950px</dimen>
     <dimen name="physical_volume_down_button_center_screen_location_y">1150px</dimen>
 
+    <!-- Statusbar padding top -->
+    <dimen name="status_bar_padding_top">7dp</dimen>
+
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">0px</dimen>
 
