@@ -12,22 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/rock/device.mk)
 
 # Inherit some common Rising stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Bootanimation Res
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# aosp stuffs
+# lineage stuffs
 TARGET_DISABLE_EPPE := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rock
-PRODUCT_NAME := aosp_rock
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := 22071219CG
+PRODUCT_NAME := lineage_rock
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := 22071219AI
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT :=POCO/stone_p_global/stone:13/TP1A.220624.014/V14.0.8.0.TLUMIXM:user/release-keys
-PRIVATE_BUILD_DESC="stone_p_global-user 13 TP1A.220624.014 V14.0.8.0.TLUMIXM release-keys"
+BUILD_FINGERPRINT :=Redmi/rock/rock:12/TP1A.220624.014/V816.0.7.0.ULUINXM:user/release-keys
+PRIVATE_BUILD_DESC="rock-user 14 UP1A.231005.007 V816.0.7.0.ULUINXM release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

@@ -127,6 +127,8 @@ ro.lmk.thrashing_limit_decay=50
 ro.config.low_ram=false
 ro.lmk.use_psi=true
 ro.lmk.kill_heaviest_task=false
+ro.lmk.psi_complete_stall_ms=35
+ro.lmk.psi_partial_stall_ms=35
 ro.lmk.swap_free_low_percentage=10
 
 # Earphone Jacks
