@@ -147,7 +147,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.4.vendor
-    
+
 PRODUCT_PACKAGES += \
     libdrm.vendor
 
@@ -504,38 +504,3 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service \
     android.hardware.ir-service.example
-
-# <!-- "start" RESERVE PARTITION SIZE FOR INSTALL GAPPS, ADAPTING FROM LINEAGE --->
-ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
-    BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE ?= true
-endif
-
-ifneq ($(WITH_GMS),true)
-    BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT ?= -1
-
-    ifeq ($(BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE),true)
-        ifeq ($(PRODUCT_IS_ATV),true)
-            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 450000000
-        else
-            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 1188036608
-        endif
-    else
-        ifeq ($(PRODUCT_IS_ATV),true)
-            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 470000000
-        else
-            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 1957691392
-        endif
-    endif
-
-    BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT ?= -1
-    ifeq ($(PRODUCT_IS_ATV),true)
-        BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE ?= 40000000
-        BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE ?= 27000000
-    else
-        BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT ?= -1
-        BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE ?= 94371840
-        BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE ?= 94371840
-    endif
-
-endif
-# <!--"end" RESERVE PARTITION SIZE FOR INSTALL GAPPS, ADAPTING FROM LINEAGE --->
