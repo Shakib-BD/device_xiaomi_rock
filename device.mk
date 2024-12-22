@@ -372,3 +372,4 @@ $(call inherit-product, packages/apps/JamesDSPManager/config.mk)
 
 # Reduce system server verbosity.Add commentMore actions
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
