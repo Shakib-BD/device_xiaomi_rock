@@ -1,14 +1,20 @@
-type vendor_fingerprint_data_file, file_type, data_file_type;
+type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+type sysfs_fingerprint, fs_type, sysfs_type;
+type fingerprint_data_file, data_file_type, file_type;
+vendor_internal_prop(vendor_fp_prop)
 
-allow hal_fingerprint_default { mtee_trusty_file sysfs_gpu sysfs_pmu sysfs_dvfsrc_dbg }:dir r_dir_perms;
+vndbinder_use(hal_fingerprint_default)
 
-allow hal_fingerprint_default { mtee_trusty_file sysfs_gpu sysfs_pmu sysfs_dvfsrc_dbg }:file r_file_perms;
+allow hal_fingerprint_default sysfs_fingerprint:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_fingerprint:file rw_file_perms;
+allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
+allow hal_fingerprint_default input_device:dir r_dir_perms;
+allow hal_fingerprint_default self:netlink_kobject_uevent_socket { bind create read setopt };
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
-allow hal_fingerprint_default vendor_fingerprint_data_file:file rw_file_perms;
-allow hal_fingerprint_default vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { find add };
-allow init hal_fingerprint_default:process { ptrace };
-
-
-
-binder_call(hal_fingerprint_default, mtk_hal_power)
+get_prop(hal_fingerprint_default, vendor_fp_prop)
 set_prop(hal_fingerprint_default, vendor_fp_prop)
+
+add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice_xiaomi)

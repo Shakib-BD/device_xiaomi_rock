@@ -1,8 +1,10 @@
 # Audio
 vendor_public_prop(vendor_audioserver_prop)
 
-# Display
-vendor_public_prop(vendor_displayfeature_prop)
+# Camera
+vendor_public_prop(vendor_thermal_engine_prop)
+vendor_restricted_prop(vendor_camera_prop)
+vendor_internal_prop(vendor_camera_persist_prop)
 
-# Info
-vendor_public_prop(vendor_fp_prop)
+# Panel info
+vendor_public_prop(vendor_panelinfo_prop)
