@@ -365,3 +365,6 @@ $(call inherit-product, vendor/xiaomi/rock/rock-vendor.mk)
 # Remove Unwanted Packages
 PRODUCT_PACKAGES += \
     RemovePackages
+
+# JamesDSP
+$(call inherit-product, packages/apps/JamesDSPManager/config.mk)
