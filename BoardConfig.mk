@@ -7,6 +7,14 @@
 DEVICE_PATH := device/xiaomi/rock
 KERNEL_PATH := device/xiaomi/rock-kernel
 
+# ART
+ifeq ($(TARGET_BUILD_VARIANT),user)
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+endif
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
