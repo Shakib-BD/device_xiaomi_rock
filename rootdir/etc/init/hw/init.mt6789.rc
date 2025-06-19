@@ -902,3 +902,7 @@ service statsd /apex/com.android.os.statsd/bin/statsd
     task_profiles ProcessCapacityHigh HighEnergySaving
     override
     disabled
+
+# Disable RotationAdd commentMore actions
+on property:sys.boot_completed=1
+    exec -- /system/bin/sh -c "settings put secure show_rotation_suggestions 0"
