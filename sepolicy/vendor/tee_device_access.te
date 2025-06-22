@@ -1,0 +1,2 @@
+# Allow tee domain to read/write device chr_files
+allow tee device:chr_file { read write };
