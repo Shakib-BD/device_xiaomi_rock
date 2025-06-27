@@ -369,3 +369,5 @@ PRODUCT_PACKAGES += \
 
 # JamesDSP
 $(call inherit-product, packages/apps/JamesDSPManager/config.mk)
+
+TARGET_BOARD_PLATFORM := mt6789

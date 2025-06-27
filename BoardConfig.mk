@@ -46,7 +46,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Plaform
 BOARD_VENDOR := xiaomi
-TARGET_BOARD_PLATFORM := mt6789
+# TARGET_BOARD_PLATFORM := mt6789
 
 # Boot image
 BOARD_BOOT_HEADER_VERSION := 4
@@ -123,7 +123,7 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
 
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/yaap/config/BoardConfigReservedSize.mk
 
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_PRODUCT := product
@@ -177,7 +177,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/yaap/config/device_framework_matrix.xml
 
 # VNDK
 BOARD_VNDK_VERSION := current
@@ -206,3 +206,5 @@ include vendor/xiaomi/rock/BoardConfigVendor.mk
 
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
+
+BUILD_BROKEN_PREBUILT_ELF_FILES := true

@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2025 The LineageOS Project
+# Copyright (C) 2025 The yaapOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rock.mk
+    $(LOCAL_DIR)/yaap_rock.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rock-user \
-    lineage_rock-userdebug \
-    lineage_rock-eng
+    yaap_rock-user \
+    yaap_rock-userdebug \
+    yaap_rock-eng

@@ -1,2 +1,5 @@
+allow gmscore_app system_data_file:file r_file_perms;
+
+set_prop(gmscore_app, system_prop)
 # Allow gmscore_app to read system_adbd_prop
-allow gmscore_app system_adbd_prop:file read;
+# allow gmscore_app system_adbd_prop:file read;

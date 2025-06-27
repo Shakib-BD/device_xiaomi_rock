@@ -1,4 +1,4 @@
-#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#!usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
@@ -137,11 +137,9 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
     .apktool_patch('blob-patches/ImsService.patch', '-r'),
     'system_ext/lib64/libimsma.so': blob_fixup()
-    .replace_needed('libsink.so', 'libsink-mtk.so'),
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
-    .add_needed('libaudioclient_shim.so'),
-    'system_ext/lib64/libsource.so': blob_fixup()
-    .add_needed('libui_shim.so'),
+        .add_needed('libaudioclient_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
     .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
@@ -155,7 +153,7 @@ module = ExtractUtilsModule(
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     check_elf=True,
-    add_firmware_proprietary_file=True,
+    add_firmware_proprietary_file=False,
 )
 
 if __name__ == "__main__":
