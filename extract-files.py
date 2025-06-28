@@ -139,7 +139,7 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libimsma.so': blob_fixup()
     .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
-    .add_needed('libaudioclient_shim.so'),
+    .add_needed('libshim_sink.so.so'),
     'system_ext/lib64/libsource.so': blob_fixup()
     .add_needed('libui_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()

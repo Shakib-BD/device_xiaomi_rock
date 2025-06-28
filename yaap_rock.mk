@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2025 The LineageOS Project
+# Copyright (C) 2025 The yaapOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common yaap stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit from rock device
 $(call inherit-product, device/xiaomi/rock/device.mk)
@@ -18,7 +18,7 @@ $(call inherit-product, device/xiaomi/rock/device.mk)
 TARGET_DISABLE_EPPE := true
 
 PRODUCT_DEVICE := rock
-PRODUCT_NAME := lineage_rock
+PRODUCT_NAME := yaap_rock
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 11 Prime
 PRODUCT_MANUFACTURER := xiaomi

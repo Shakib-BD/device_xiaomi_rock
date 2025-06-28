@@ -369,3 +369,18 @@ PRODUCT_PACKAGES += \
 
 # JamesDSP
 $(call inherit-product, packages/apps/JamesDSPManager/config.mk)
+
+# Board Platform
+TARGET_BOARD_PLATFORM := mt6789
+
+# Shim
+PRODUCT_PACKAGES += \
+    libbase_shim \
+    libshim_sink
+
+# Privapp permissions whitelisting
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
