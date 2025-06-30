@@ -101,7 +101,7 @@ ro.vendor.mtk_log_hide_gps=1
 ro.hardware.kmsetkey=beanpod
 
 # LMKD
-ro.lmk.psi_complete_stall_ms=35
+ro.lmk.psi_complete_stall_ms=200
 ro.lmk.psi_partial_stall_ms=35
 ro.lmk.swap_free_low_percentage=10
 ro.lmk.thrashing_limit=30
@@ -115,8 +115,6 @@ ro.lmk.upgrade_pressure=100
 ro.lmk.downgrade_pressure=30
 ro.lmk.kill_heaviest_task=true
 ro.lmk.use_minfree_levels=false
-ro.lmk.log_stats=true
-ro.lmk.low=1001
 ro.lmk.use_psi=true
 
 # Media
