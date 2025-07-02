@@ -120,18 +120,17 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-framework \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common \
-    mediatek-ims-extension-plugin
+# PRODUCT_BOOT_JARS += \
+#    mediatek-common \
+#    mediatek-ims-base \
+#    mediatek-ims-common \
+#    mediatek-framework \
+#    mediatek-telecom-common \
+#    mediatek-telephony-base \
+#    mediatek-telephony-common \
+#    mediatek-ims-extension-plugin
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
 # Keymaster
@@ -373,3 +372,18 @@ $(call inherit-product, packages/apps/JamesDSPManager/config.mk)
 # Reduce system server verbosity.Add commentMore actions
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor
+
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V3-ndk.vendor \
+    lib_android_keymaster_keymint_utils.vendor \
+    libcppbor_external.vendor \
+    libkeymint.vendor
+
+# Mediatek common IMS
+$(call inherit-product, vendor/mediatek/ims/ims.mk)

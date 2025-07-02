@@ -48,13 +48,8 @@ def fixup_ndk_platform(libname: str) -> tuple[str, str]:
 
 patchelf_version = "0_17_2"
 
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
-
-
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -62,7 +57,7 @@ blob_fixups: blob_fixups_user_type = {
     .patchelf_version(patchelf_version)
     .replace_needed(
         "android.hardware.security.keymint-V1-ndk_platform.so",
-        "android.hardware.security.keymint-V4-ndk.so",
+        "android.hardware.security.keymint-V3-ndk.so",
     )
     .add_needed("android.hardware.security.rkp-V3-ndk.so")
     .replace_needed(
@@ -127,6 +122,7 @@ blob_fixups: blob_fixups_user_type = {
     .replace_needed("libutils.so", "libutils-v32.so"),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
     .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
+    'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
     ('vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so', 'vendor/bin/hw/android.hardware.gnss-service.mediatek'): blob_fixup()
     .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/mtk_agpsd': blob_fixup()
@@ -134,18 +130,12 @@ blob_fixups: blob_fixups_user_type = {
     .add_needed('libssl-v32.so'),
     'vendor/lib64/mt6789/libmnl.so': blob_fixup()
     .add_needed('libcutils.so'),
-    'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-    .apktool_patch('blob-patches/ImsService.patch', '-r'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-    .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system_ext/lib64/libsink-mtk.so': blob_fixup()
-    .add_needed('libaudioclient_shim.so'),
-    'system_ext/lib64/libsource.so': blob_fixup()
-    .add_needed('libui_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
     .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
     .add_needed('libprocessgroup_shim.so'),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+    .add_needed('libutils-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

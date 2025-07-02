@@ -268,6 +268,60 @@
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
+{
+      "Name": "ThermalMessage",
+      "Path": "/sys/devices/virtual/thermal/thermal_message/sconfig",
+      "Values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "30",
+        "41",
+        "42",
+        "49",
+        "51"
+      ],
+      "ResetOnInit": true,
+      "DefaultIndex": 0,
+      "Comments": [
+        "thermal-normal",
+        "thermal-high",
+        "thermal-extreme",
+        "thermal-huanji",
+        "thermal-videochat",
+        "thermal-phone",
+        "thermal-tgame",
+        "thermal-nolimits",
+        "thermal-class0",
+        "thermal-camera",
+        "thermal-youtube",
+        "thermal-arvr",
+        "thermal-4k",
+        "thermal-8k",
+        "thermal-navigation",
+        "thermal-mgame",
+        "thermal-video",
+        "thermal-per-normal",
+        "thermal-per-class0",
+        "thermal-per-camera",
+        "thermal-per-navigation",
+        "thermal-per-video"
+      ]
+    },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
@@ -404,6 +458,12 @@
       "Value": "9999999999"
     },
     {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "ThermalMessage",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
@@ -420,6 +480,12 @@
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
       "Value": "51"
+    },
+    {
+      "PowerHint": "Game",
+      "Node": "ThermalMessage",
+      "Duration": 0,
+      "Value": "10"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
