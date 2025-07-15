@@ -19,12 +19,12 @@ TARGET_DISABLE_EPPE := true
 
 PRODUCT_DEVICE := rock
 PRODUCT_NAME := lineage_rock
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi 11 Prime
+PRODUCT_BRAND := Poco
+PRODUCT_MODEL := Poco M5
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="missi_phone_global_ext4-user 14 UP1A.231005.007 V816.0.12.0.ULUMIXM release-keys" \
-    BuildFingerprint=POCO/stone_p_global/stone:13/TP1A.220624.014/V816.0.12.0.ULUMIXM:user/release-keys
+    BuildDesc="missi_phone_global_ext4-user 14 UP1A.231005.007 V816.0.7.0.ULUIDXM release-keys" \
+    BuildFingerprint=POCO/stone_p_global/stone:14/UP1A.231005.007/V816.0.7.0.ULUIDXM:user/release-keys

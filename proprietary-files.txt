@@ -1,4 +1,4 @@
-# Unpinned blobs from missi_phone_global_ext4-user-14-UP1A.231005.007-V816.0.12.0.ULUMIXM-release-keys
+# Unpinned blobs from missi_phone_global_ext4-user 14 UP1A.231005.007 V816.0.7.0.ULUIDXM release-keys
 
 # AAL
 vendor/lib64/mt6789/libaal_cust_func.so
@@ -1556,6 +1556,12 @@ system_ext/lib64/libvt_avsync.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/priv-app/ImsService/ImsService.apk
+
+# Recovery Touch
+vendor/firmware/nt36672c_tm_01_ts_mp.bin:recovery/root/vendor/firmware/nt36672c_tm_01_ts_mp.bin
+vendor/firmware/nt36672c_tm_01_ts_fw.bin:recovery/root/vendor/firmware/nt36672c_tm_01_ts_fw.bin
+vendor/firmware/focaltech_ts_fw_tianma.bin:recovery/root/vendor/firmware/focaltech_ts_fw_tianma.bin
+vendor/firmware/focaltech_mp_fw_tianma.ini:recovery/root/vendor/firmware/focaltech_mp_fw_tianma.ini
 
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
