@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/rock
-KERNEL_PATH := device/xiaomi/rock-kernel
+KERNEL_PATH := kernel/xiaomi/rock
 
 # ART
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -64,6 +64,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x3fff8000
@@ -83,7 +84,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_NO_KERNEL_OVERRIDE := true
 
 # Workaround to make lineage's soong generator work
-TARGET_KERNEL_SOURCE := device/xiaomi/rock-kernel/kernel-headers
+TARGET_KERNEL_SOURCE := kernel/xiaomi/rock/kernel-headers
 
 LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
 PRODUCT_COPY_FILES += \

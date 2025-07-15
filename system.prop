@@ -12,6 +12,13 @@ wifi.direct.interface=p2p0
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 
+# Debug
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
+ro.force.debuggable=1
+ro.secure=0
+
 # Dexopt
 dalvik.vm.dex2oat64.enabled=true
 pm.dexopt.install=speed-profile
