@@ -29,3 +29,6 @@
 
 # Sysfs audio vmax
 /sys/devices/platform/soc/1101a000\.i2c/i2c-6/6-0058/vmax u:object_r:sysfs_audio_vmax:s0
+
+# Label device node of tee_device
+/dev/tee0 u:object_r:tee_device:s0
